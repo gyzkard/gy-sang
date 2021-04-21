@@ -1,0 +1,2 @@
+#exclude gh-pages from stats
+docs/gh-pages/* linguist-vendored
