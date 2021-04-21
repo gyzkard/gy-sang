@@ -1,0 +1,7 @@
+[submodule "docs/gh-pages"]
+	path = docs/gh-pages
+	url = https://github.com/gyzkard/gy-sang
+	branch = gh-pages
+[submodule "external/gy-mpl"]
+	path = external/gy-mpl
+	url = https://github.com/gyzkard/gy-mpl
