@@ -1,6 +1,6 @@
 # gy-sang
 
-Strong types for C++ to distinguish between zero, one or other numbers based indexes.
+Strong angle types for C++ to distinguish between degree and radian and possibly other types.
 
 ## Quickstart
 
@@ -9,12 +9,12 @@ Strong types for C++ to distinguish between zero, one or other numbers based ind
 
 using namespace gysang;
 
-int data[] = { 2, 3 };
-int sum = 0;
-for (auto i = 1_i1; i <= Indexed_i1{ sizeof(data)/sizeof(int) }; ++i)
-	sum += data[i]*static_cast<int>(i);
-
-assert(sum == 3); // 2*0 + 3*1
+Angle_DegD d(-30);
+Angle_RadD r(d);
+double f = std::abs(sin(d) / cos(r) - tan(r));
+if (std::abs(sin(d) / cos(r) - tan(r)) < 1e-15)
+	d = abs(d);
+assert(d.value() == 30);
 ```
 
 ## Supported compilers

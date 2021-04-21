@@ -1,8 +1,9 @@
+#include <cassert>
+
 //#define GY_SANG_DISABLE_DEFINE_LITERALS
 //#define GY_SANG_DISABLE_DEFINE_USINGS
+#include <gysang/cmath.hpp>
 #include <gysang/gysang.hpp>
-
-#include <cassert>
 
 namespace
 {
@@ -10,18 +11,12 @@ namespace
 
     void example()
     {
-        assert(2 * 2 == 4);
-        assert(2 * 2_i1 == 4_i1);
-        assert(2_i1 * 2 == 4_i1);
-        assert(2 * 2_i1 == 3);
-        assert(2_i1 * 2 == 3);
-
-        int data[] = { 2, 3 };
-        int sum = 0;
-        for (auto i = 1_i1; i <= Indexed_i1{ sizeof(data)/sizeof(int) }; ++i)
-            sum += data[i]*static_cast<int>(i);
-
-        assert(sum == 3); // 2*0 + 3*1
+		Angle_DegD d(-30);
+		Angle_RadD r(d);
+		double f = std::abs(sin(d) / cos(r) - tan(r));
+		if (std::abs(sin(d) / cos(r) - tan(r)) < 1e-15)
+			d = abs(d);
+		assert(d.value() == 30);
     }
 }
 

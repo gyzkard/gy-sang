@@ -9,7 +9,7 @@ Distributed under the MIT License.
 gy-sang
 =======
 
-Strong types to distinguish between degree and radian and possibly other types.
+Strong angle types for C++ to distinguish between degree and radian and possibly other types.
 
 ## Copyright and License
 

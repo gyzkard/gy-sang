@@ -1,8 +1,6 @@
 #include <cassert>
 #include <gympl/outputCompilerInfo.hpp>
 #include <gympl/testing.hpp>
-#include <sstream>
-#include <string>
 
 //#define GY_SANG_DISABLE_DEFINE_LITERALS
 //#define GY_SANG_DISABLE_DEFINE_USINGS
@@ -11,12 +9,6 @@
 
 #define GYMPL_PRINT_CONFIG
 #include <gympl/outputConfiguration.hpp>
-
-#ifndef _USE_MATH_DEFINES
-#define _USE_MATH_DEFINES
-#endif
-#include <cmath>
-#include <math.h>
 
 namespace
 {
